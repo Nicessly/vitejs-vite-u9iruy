@@ -32,3 +32,9 @@ nav .create{
 .v{
     margin-left: -10rem;
 }
+
+@media screen and (max-width: 660px) {
+    .v{
+      margin-left: 10rem;
+  }
+}

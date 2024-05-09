@@ -1,0 +1,85 @@
+/* card.css */
+
+.main {
+    display: flex;
+    justify-content: center;
+  }
+
+  
+  .feeds .feed{
+    background-color: rgb(12, 12, 12);
+    border-radius: var(--card-border-radius);
+    padding: var(--card-padding);
+    margin: 1rem 0;
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+  .feed {
+    max-width: 600px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .head {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+   .user {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+   .profile-pic img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+   .info h3 {
+    margin: 0;
+    font-size: 16px;
+  }
+   .edit {
+    margin-left: auto;
+  }
+   .photo img {
+    width: 100%;
+  }
+ 
+  .action-button {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .action-button button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-primary);
+  }
+
+  .action-button button:focus {
+    outline: none;
+  }
+   .liked-by {
+    padding: 10px;
+  }
+   .caption {
+    padding: 10px;
+  }
+   .comments {
+    padding: 10px;
+  }
+
+   .comments li {
+    line-height: 1;
+    margin-bottom: 10px;
+  }
+   .comments li strong {
+    font-weight: bold;
+    margin-right: 5px;
+  }
+ 

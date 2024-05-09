@@ -15,6 +15,7 @@
     }
     
     .left .sidebar .menu-item{
+        background-color: rgb(12, 12, 12);
         display: flex;
         align-items: center;
         position: relative;
@@ -72,7 +73,25 @@
     }
     
     @media screen and (max-width: 768px){
+ 
         main .container .left .sidebar{
+            width: 4rem;
+            margin-top: 5rem;
+        }
+        .left{
+            z-index: 5;
+        }
+        .sidebar h3{
             display: none;
         }
+
+        main .container .left{
+            grid-column: 3/4;
+            position: fixed;
+            bottom: 0;
+            right: 0;
+        }
+  
+
     }
+

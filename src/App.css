@@ -106,11 +106,13 @@ main{
 
 
   @media screen and (max-width: 660px) {
+
     /* Ajustar el posicionamiento de Post y Nav */
     Nav {
       grid-column: 1 / -1; /* Nav ocupa todas las columnas */
     }
-    
+
+  
     Post {
       grid-column: 2 / -1; /* Post ocupa desde la segunda columna hasta el final */
     }
@@ -124,4 +126,5 @@ main{
   position: relative;
   }
 }
-  
+
+
