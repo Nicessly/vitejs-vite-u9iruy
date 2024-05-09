@@ -1,77 +1,68 @@
 
-import React, { useEffect } from 'react';
-import './buscar.css'; // Asegúrate de tener tu archivo de estilos CSS importado
+import './buscar.css'; 
+import React, { useState } from 'react';
+import { UilSearch } from '@iconscout/react-unicons';
+import { UilUsersAlt } from '@iconscout/react-unicons'
+import uno from "./1.jpg";
+import dos from "./3.jpg";
+import tres from "./4.avif";
 
-function Messages() {
+const personas = [
+  { id: 1, nombre: 'Juan', imagen: uno },
+  { id: 2, nombre: 'María', imagen: dos },
+  { id: 3, nombre: 'Pedro', imagen: tres },
+  // Agrega más personas según sea necesario
+];
 
-  useEffect(() => {
-    const searchMessage = () => {
-      const messages = document.querySelector('.messages');
-      const message = messages.querySelectorAll('.message');
-      const messageSearch = document.querySelector('#message-search');
-      const val = messageSearch.value.toLowerCase();
+const BuscarPersonas = () => {
+  const [query, setQuery] = useState('');
+  const [results, setResults] = useState([]);
 
-      message.forEach(chat => {
-        let name = chat.querySelector('h5').textContent.toLowerCase();
-        if (name.indexOf(val) !== -1) {
-          chat.style.display = 'flex';
-        } else {
-          chat.style.display = 'none';
-        }
-      });
-    };
+  const handleInputChange = (event) => {
+    const inputValue = event.target.value;
+    setQuery(inputValue);
 
-    const messageSearch = document.querySelector('#message-search');
-    if (messageSearch) {
-      messageSearch.addEventListener('keyup', searchMessage);
-    }
+    // Filtrar personas según el valor de búsqueda
+    const filteredPersonas = personas.filter(persona =>
+      persona.nombre.toLowerCase().includes(inputValue.toLowerCase())
+    );
 
-    return () => {
-      if (messageSearch) {
-        messageSearch.removeEventListener('keyup', searchMessage);
-      }
-    };
-  }, []);
+    setResults(filteredPersonas);
+  };
 
   return (
     <main>
-        <div className="container">
+      <div className="container">
         <div className="right">
-          <div className="messages">
-            <div className="heading">
-              <h4>Messages</h4>
-              <span><i className="uil uil-edit"></i></span>
-            </div>
-
-            <div className="search-bar">
-              <span><i className="uil uil-search"></i></span>
-              <input type="search" placeholder="Search Messages" id="message-search" />
-            </div>
-
-            <div className="category">
-              <h6 className="active">Primary</h6>
-              <h6>General</h6>
-              <h6 className="message-requests">Requests(7)</h6>
-            </div>
-
-            <div className="message">
-              <div className="profile-pic">
-                <img src="images/profile-17.jpg" alt="Profile" />
-                <div className="active"></div>
-              </div>
-              <div className="message-body">
-                <h5>Kareena Joshua</h5>
-                <p className="text-muted">Just woke up bruh..</p>
-              </div>
-            </div>
-
-            {/* Repite este patrón para cada mensaje */}
-
+        <div className="messages">
+          <div className="heading">
+            <h4>Search</h4>
+            <span><i><UilUsersAlt/></i></span>
           </div>
+          <div className="search-bar">
+            <input
+              type="search"
+              placeholder="Buscar personas..."
+              value={query}
+              onChange={handleInputChange}
+              className="search-input"
+            />
+          </div>
+          <div className="results">
+            {results.map(persona => (
+              <div key={persona.id} className="message">
+                <div className="profile-pic">
+                  <img src={persona.imagen} alt={persona.nombre} />
+                </div>
+                <p className='message-body h5'>{persona.nombre}</p>
+              </div>
+            ))}
           </div>
         </div>
+        </div>
+      </div>
     </main>
   );
-}
+};
 
-export default Messages;
+export default BuscarPersonas;

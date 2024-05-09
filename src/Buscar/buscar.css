@@ -1,0 +1,79 @@
+
+.main .container .right .messages{
+    display: flex;
+    height: max-content;
+    position: sticky;
+    top: var(--sticky-top-left);
+}
+
+.right .messages {
+    width: 250px;
+    margin-top: 1rem;
+    background-color: rgb(12, 12, 12); /* Establece el color de fondo */
+    border-radius: 10px; /* Establece los bordes redondeados */
+    position: sticky;
+    top: var(--sticky-top-right);
+    bottom: 0;
+    padding: 1.5rem; /* Ajusta el relleno según sea necesario */
+
+  }
+
+.right .messages .heading{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+  
+  .results {
+    margin-top: 1rem; /* Ajusta el margen superior */
+  }
+  
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .search-input {
+    flex: 1;
+    padding: 10px;
+    margin: 0;
+    border: 1px solid hsl(39, 90%, 51%);
+    border-radius: 100px;
+    background-color: transparent;
+    color: #fff;
+    transition: border-color 0.3s, box-shadow 0.3s; /* Agrega una transición suave para el cambio de color de borde y de sombra */
+    box-shadow: 0 0 5px 2px rgba(255, 255, 255, 0); /* Establece una sombra inicial transparente */
+  }
+  
+  .search-input:focus {
+    border: 1px solid hsl(39, 90%, 51%);
+    outline: hsl(39, 90%, 51%); /* Quita el contorno predeterminado al enfocar */
+    box-shadow: 0 0 10px 2px hsl(34, 95%, 44%); 
+  }
+  
+  
+  .right .messages .message {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    align-items: start;
+  }
+  
+  .message-body {
+    margin-top: 9px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  
+  /* Estilos para la "x" que aparece por defecto */
+  .search-input::-webkit-search-cancel-button {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(39, 90%, 51%); /* Color rojo */
+    border-radius: 50%;
+    cursor: pointer; /* Añade cursor pointer */
+  }
+  
