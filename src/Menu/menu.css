@@ -1,6 +1,7 @@
 
     
     main .container .left{
+        display: flex;
         height: max-content;
         position: sticky;
         top: var(--sticky-top-left);
@@ -70,4 +71,8 @@
 
     }
     
-    
+    @media screen and (max-width: 768px){
+        main .container .left .sidebar{
+            display: none;
+        }
+    }

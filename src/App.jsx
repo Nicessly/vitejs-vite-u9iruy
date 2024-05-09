@@ -1,3 +1,4 @@
+
 import { useState } from 'react'
 import './App.css'
 import Nav from "./Nav/nav";
@@ -10,10 +11,14 @@ function App() {
   return (
     <div>
       <Nav/> 
+      <div className="container">
+      <main>
       <Menu/>
-      <Post/>
-      </div> 
-
+        <Post/>
+        <Menu/>
+      </main>
+      </div>
+    </div>
   )
 }
 
