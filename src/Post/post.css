@@ -1,7 +1,7 @@
 
 
 .create-post {
-    width: 450px;
+    width: 117%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -48,6 +48,7 @@
  
  @media screen and (max-width: 660px) {
    .create-post{
+      width: 100%;
       margin-top: 0rem;
    }
  }

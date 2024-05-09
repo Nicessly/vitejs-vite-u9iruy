@@ -5,6 +5,7 @@ import Nav from "./Nav/nav";
 import Menu from './Menu/menu';
 import Post from './Post/post';
 import FeedList from './Card/CardList';
+import Messages from './Buscar/buscar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,7 +20,7 @@ function App() {
             <Post/>
             <FeedList/>
           </div>
-          <Menu/>
+          <Messages/>
         </main>
       </div>
     </div>

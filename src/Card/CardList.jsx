@@ -2,6 +2,7 @@
 import React from 'react';
 import Perfil from "./perfil.jpg"
 import Perfil1 from "./perfil1.jpg"
+import Foto from "./algo.avif"
 import Feed from './card';
 
 function FeedList() {
@@ -11,6 +12,17 @@ function FeedList() {
         profilePic={Perfil}
         userName="Lana Rose"
         photoSrc={Perfil}
+        likedBy=""
+        caption="Lorem ipsum dolor storiesquiquam eius."
+        comments={[
+          { user: 'User4', content: 'Great photo!' },
+          { user: 'User5', content: 'Love it!' }
+        ]} // Cambié esto para ser un array de objetos de comentario
+      />
+      <Feed
+        profilePic={Perfil}
+        userName="Lana Rose"
+        photoSrc={Foto}
         likedBy=""
         caption="Lorem ipsum dolor storiesquiquam eius."
         comments={[

@@ -1,9 +1,9 @@
 
 import React, { useState } from 'react';
-import './card.css'
-import { UilEllipsisV } from '@iconscout/react-unicons'
-import { UilHeart } from '@iconscout/react-unicons'
-import { UilCommentAltDots } from '@iconscout/react-unicons'
+import './card.css';
+import { UilEllipsisV } from '@iconscout/react-unicons';
+import { UilHeart } from '@iconscout/react-unicons';
+import { UilCommentAltDots } from '@iconscout/react-unicons';
 
 function Feed({ profilePic, userName, photoSrc, likedBy, caption, comments }) {
   const [showComments, setShowComments] = useState(false);
@@ -27,7 +27,7 @@ function Feed({ profilePic, userName, photoSrc, likedBy, caption, comments }) {
           <span className="edit"><i><UilEllipsisV/></i></span>
         </div>
         <div className="photo">
-          <img src={photoSrc} alt="" />
+          <img src={photoSrc} alt="" className="photo-image" />
         </div>
         <div className="action-button">
           <button><UilHeart/></button>

@@ -11,6 +11,7 @@
     border-radius: var(--card-border-radius);
     padding: var(--card-padding);
     margin: 1rem 0;
+    margin-bottom: 0rem;
     font-size: 0.85rem;
     line-height: 1.5;
 }
@@ -38,7 +39,7 @@
     margin-right: 10px;
   }
    .info h3 {
-    margin: 0;
+    margin: 1rem;
     font-size: 16px;
   }
    .edit {
@@ -83,3 +84,7 @@
     margin-right: 5px;
   }
  
+  .photo img.photo-image {
+    width: 100%; /* La imagen ocupará todo el ancho del contenedor */
+    height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
+  }
