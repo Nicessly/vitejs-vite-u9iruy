@@ -8,7 +8,7 @@ import dos from "./3.jpg";
 import tres from "./4.avif";
 
 const personas = [
-  { id: 1, nombre: 'Juan', imagen: uno },
+  { id: 1, nombre: 'Juana', imagen: uno },
   { id: 2, nombre: 'María', imagen: dos },
   { id: 3, nombre: 'Pedro', imagen: tres },
   // Agrega más personas según sea necesario

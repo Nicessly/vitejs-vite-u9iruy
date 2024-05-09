@@ -24,7 +24,6 @@ function Feed({ profilePic, userName, photoSrc, likedBy, caption, comments }) {
           <div className="info">
             <h3>{userName}</h3>
           </div>
-          <span className="edit"><i><UilEllipsisV/></i></span>
         </div>
         <div className="photo">
           <img src={photoSrc} alt="" className="photo-image" />

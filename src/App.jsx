@@ -20,11 +20,13 @@ function App() {
             <Post/>
             <FeedList/>
           </div>
-          <BuscarPersonas/>
+          <div className="buscar-container">
+            <BuscarPersonas/>
+          </div>
         </main>
       </div>
     </div>
   )
 }
 
-export default App
+export default App;

@@ -13,7 +13,6 @@
     margin: 1rem 0;
     margin-bottom: 0rem;
     font-size: 0.85rem;
-    margin-left: -0.5rem;
     line-height: 1.5;
 }
   .feed {
@@ -43,18 +42,16 @@
     margin: 1rem;
     font-size: 16px;
   }
-   .edit {
-    margin-left: auto;
-  }
+
    .photo img {
     width: 100%;
   }
  
   .action-button {
     display: flex;
-    justify-content: space-between;
-    padding: 10px;
-  }
+    gap: 10px; /* Espacio entre elementos */
+    padding: 10px; /* Espacio alrededor de los elementos */
+}
 
   .action-button button {
     background: none;
@@ -88,4 +85,11 @@
   .photo img.photo-image {
     width: 100%; /* La imagen ocupará todo el ancho del contenedor */
     height: auto; /* La altura se ajustará automáticamente para mantener la proporción original */
+  }
+
+  @media screen and (max-width: 660px) {
+  .feeds .feed{
+     margin-left: 1rem;
+
+}
   }
