@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import './App.css'
 import Nav from "./Nav/nav";
@@ -20,9 +19,12 @@ function App() {
             <Post/>
             <FeedList/>
           </div>
-          <div className="buscar-container">
-            <BuscarPersonas/>
-          </div>
+            <div className="buscar-container">
+              <BuscarPersonas/>
+            </div>
+            <div className="buscar-container-no">
+              <BuscarPersonas/>
+            </div>
         </main>
       </div>
     </div>

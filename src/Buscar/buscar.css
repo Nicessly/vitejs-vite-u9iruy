@@ -28,10 +28,6 @@
   .results {
     margin-top: 1rem; /* Ajusta el margen superior */
   }
-
-  .results:hoven {
-    background-color: rgb(255, 255, 255); /* Ajusta el margen superior */
-  }
   
   .search-bar {
     display: flex;
@@ -80,3 +76,10 @@
     border-radius: 50%;
     cursor: pointer; /* Añade cursor pointer */
   }
+
+ /* @media (max-width: 660px) {
+    .right .messages {
+      display: none; 
+    }
+  }*/
+  

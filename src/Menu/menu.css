@@ -90,9 +90,9 @@
     .modal {
         z-index: 12;
     }
+
     
     @media screen and (max-width: 768px){
- 
         main .container .left .sidebar{
             width: 4rem;
             margin-top: 5rem;
@@ -114,3 +114,7 @@
 
     }
 
+    @media (max-width: 660px) {
+        
+      }
+      
