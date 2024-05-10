@@ -5,6 +5,7 @@ import Menu from './Menu/menu';
 import Post from './Post/post';
 import FeedList from './Card/CardList';
 import BuscarPersonas from './Buscar/buscar';
+import CalendarioB from './Calendario/calendarioB';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,12 +20,7 @@ function App() {
             <Post/>
             <FeedList/>
           </div>
-            <div className="buscar-container">
-              <BuscarPersonas/>
-            </div>
-            <div className="buscar-container-no">
-              <BuscarPersonas/>
-            </div>
+          <CalendarioB/>
         </main>
       </div>
     </div>

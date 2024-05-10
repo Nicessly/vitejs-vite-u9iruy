@@ -5,6 +5,7 @@
         height: max-content;
         position: sticky;
         top: var(--sticky-top-left);
+        
     }
     
     
@@ -113,8 +114,3 @@
   
 
     }
-
-    @media (max-width: 660px) {
-        
-      }
-      

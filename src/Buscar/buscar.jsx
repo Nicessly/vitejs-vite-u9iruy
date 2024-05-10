@@ -11,6 +11,12 @@ const personas = [
   { id: 1, nombre: 'Juana', imagen: uno },
   { id: 2, nombre: 'María', imagen: dos },
   { id: 3, nombre: 'Pedro', imagen: tres },
+  { id: 4, nombre: 'Juana', imagen: uno },
+  { id: 5, nombre: 'María', imagen: dos },
+  { id: 6, nombre: 'Pedro', imagen: tres },
+  { id: 7, nombre: 'Juana', imagen: uno },
+  { id: 8, nombre: 'María', imagen: dos },
+  { id: 9, nombre: 'Pedro', imagen: tres },
   // Agrega más personas según sea necesario
 ];
 

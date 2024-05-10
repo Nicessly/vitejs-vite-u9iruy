@@ -41,7 +41,7 @@ function Menu() {
                             className={`menu-item ${activeMenuItem === 'Explore' ? 'active' : ''}`} 
                             onClick={() => handleMenuItemClick('Explore')}
                         >
-                            <span className='i' onClick={toggleSearchModal}><UilSearch/></span><h3>Explore</h3>
+                            <span className='i' onClick={toggleSearchModal}><UilSearch/></span><h3 onClick={toggleSearchModal}>Explore</h3>
                         </a>
                         <a 
                             className={`menu-item ${activeMenuItem === 'ZyRoom' ? 'active' : ''}`} 
