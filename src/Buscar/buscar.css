@@ -31,6 +31,28 @@
   overflow-y: auto;/* Ajusta el margen superior */
   }
   
+/* Estilo del scroll */
+.results::-webkit-scrollbar {
+  width: 8px; /* Ancho del scrollbar */
+}
+
+/* Estilo del riel del scroll */
+.results::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Color del riel del scrollbar */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+/* Estilo del pulgar del scroll */
+.results::-webkit-scrollbar-thumb {
+  background: #888; /* Color del pulgar del scrollbar */
+  border-radius: 10px; /* Borde redondeado */
+}
+
+/* Cambia el color del pulgar del scroll cuando se pasa sobre él */
+.results::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+  
   .search-bar {
     display: flex;
     align-items: center;
@@ -50,9 +72,9 @@
   }
   
   .search-input:focus {
-    border: 1px solid hsl(39, 90%, 51%);
+    border: 2px solid hsl(39, 90%, 51%);
     outline: hsl(39, 90%, 51%); /* Quita el contorno predeterminado al enfocar */
-    box-shadow: 0 0 10px 2px hsl(34, 95%, 44%); 
+    box-shadow: 0 0 20px 3px hsl(34, 95%, 44%); 
   }
   
   
