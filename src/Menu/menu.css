@@ -5,6 +5,7 @@
         height: max-content;
         position: sticky;
         top: var(--sticky-top-left);
+        margin-right: 2rem;
         
     }
     

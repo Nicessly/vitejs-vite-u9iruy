@@ -1,19 +1,28 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Importa el componente Link de React Router
 import './menu.css'; 
 import { UilSearch } from '@iconscout/react-unicons';
 import { UilHouseUser } from '@iconscout/react-unicons';
 import { UilChatBubbleUser } from '@iconscout/react-unicons';
 import { UilSetting } from '@iconscout/react-unicons';
-import { UilUserCircle } from '@iconscout/react-unicons'
+import { UilUserCircle } from '@iconscout/react-unicons';
 import BuscarPersonas from '../Buscar/buscar';
-
+import Perfil from '../Perfil/Perfi';
+import Post from '../Post/post';
+import FeedList from '../Card/CardList';
 
 function Menu() {
     const [activeMenuItem, setActiveMenuItem] = useState('Home');
     const [showSearchModal, setShowSearchModal] = useState(false);
+    const [showPerfil, setShowPerfil] = useState(false);
 
     const handleMenuItemClick = (menuItem) => {
         setActiveMenuItem(menuItem);
+        if (menuItem === 'Perfil') {
+            setShowPerfil(true);
+        } else {
+            setShowPerfil(false);
+        }
     };
 
     const toggleSearchModal = () => {
@@ -72,6 +81,14 @@ function Menu() {
                     <div className="modal" onClick={preventClosingModal}>
                         <BuscarPersonas/>
                     </div>
+                </div>
+            )}
+            {/* Mostrar el componente de perfil si showPerfil es true, de lo contrario, muestra los componentes de publicaciones y feed */}
+            {showPerfil && <Perfil />}
+            {!showPerfil && (
+                <div className="post-and-feed">
+                    <Post/>
+                    <FeedList/>
                 </div>
             )}
         </main>

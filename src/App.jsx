@@ -17,10 +17,6 @@ function App() {
       <div className="container">
         <main>
           <Menu/>
-          <div className="post-and-feed">
-            <Post/>
-            <FeedList/>
-          </div>
           <CalendarioB/>
         </main>
       </div>

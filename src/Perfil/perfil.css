@@ -1,0 +1,42 @@
+
+  .perfil-facebook {
+    width: 100%;
+    position: relative;
+ }
+  
+ .cover-photo {
+    width: 851px; /* Ancho de 851px */
+    height: 315px; /* Alto de 315px */
+  }
+  
+  .portada {
+    width: 100%;
+    position: absolute;
+  }
+  
+  
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 5px solid #fff; /* Ajusta el color y el grosor del borde según sea necesario */
+  }
+  
+  .info {
+    text-align: center;
+    margin-top: 50px; /* Ajusta la separación entre la foto de perfil y la información del perfil según sea necesario */
+  }
+  
+  .datos {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+  
+  .datos span {
+    margin: 0 5px;
+  }
+  
