@@ -4,7 +4,9 @@ import { UilSearch } from '@iconscout/react-unicons';
 import { UilHouseUser } from '@iconscout/react-unicons';
 import { UilChatBubbleUser } from '@iconscout/react-unicons';
 import { UilSetting } from '@iconscout/react-unicons';
+import { UilUserCircle } from '@iconscout/react-unicons'
 import BuscarPersonas from '../Buscar/buscar';
+
 
 function Menu() {
     const [activeMenuItem, setActiveMenuItem] = useState('Home');
@@ -38,6 +40,12 @@ function Menu() {
                             <span className='i'><UilHouseUser/></span><h3>Home</h3>
                         </a>
                         <a 
+                            className={`menu-item ${activeMenuItem === 'Perfil' ? 'active' : ''}`} 
+                            onClick={() => handleMenuItemClick('Perfil')}
+                        >
+                            <span className='i'><UilUserCircle/></span><h3>Perfil</h3>
+                        </a>
+                        <a 
                             className={`menu-item ${activeMenuItem === 'Explore' ? 'active' : ''}`} 
                             onClick={() => handleMenuItemClick('Explore')}
                         >
@@ -55,6 +63,7 @@ function Menu() {
                         >
                             <span className='i'><UilSetting/></span><h3>Settings</h3>
                         </a>
+                       
                     </div>
                 </div>
             </div>
