@@ -6,8 +6,9 @@
 }
 
 .right .calendar-container  {
+  margin-right: -30rem;
     width: 250px;
-    margin-top: 1rem;
+    margin-top: 1.6rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     background-color: rgb(12, 12, 12); /* Establece el color de fondo */
     border-radius: 10px; /* Establece los bordes redondeados */

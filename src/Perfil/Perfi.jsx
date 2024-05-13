@@ -3,11 +3,12 @@ import "./perfil.css"
 
 function Perfil() {
     return (
+       <div className="middle">
         <div className="perfil-facebook">
           {/* Imagen de portada */}
           <div className="cover-photo">
             <img
-              src="https://via.placeholder.com/800x200" // Coloca la URL de la imagen de portada aquí
+              src="" // Coloca la URL de la imagen de portada aquí
               alt="Portada"
               className="portada"
             />
@@ -28,6 +29,7 @@ function Perfil() {
               <span>Post subidos: 500</span>
             </div>
           </div>
+        </div>
         </div>
   );
 }

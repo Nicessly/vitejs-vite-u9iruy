@@ -13,7 +13,7 @@ function Feed({ profilePic, userName, photoSrc, likedBy, caption, comments }) {
   };
 
   return (
-    <main>
+    <main className='mover'>
       <div className="middle"></div>
       <div className="feed">
         <div className="head"></div>

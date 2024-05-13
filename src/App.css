@@ -36,6 +36,9 @@
   margin: 0 auto;
 }
 
+ .mover{
+  margin-left: 2.4rem;
+}
 
 main{
     position: relative;
@@ -86,7 +89,7 @@ main{
   main {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* Divide el espacio en tres columnas */
-    gap: 2rem;
+    gap: 2.1rem;
     position: relative;
   }
 
@@ -116,7 +119,14 @@ main{
     Post {
       grid-column: 2 / -1; /* Post ocupa desde la segunda columna hasta el final */
     }
+    .create-post {
+      margin-left: 1rem;
 
+    }
+
+    .mover{
+      margin-left: 0;
+    }
     main {
         margin-left: -2rem;
   padding: 0 1rem; /* Añadir relleno a los lados */

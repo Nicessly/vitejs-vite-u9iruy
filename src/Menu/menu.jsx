@@ -10,6 +10,7 @@ import BuscarPersonas from '../Buscar/buscar';
 import Perfil from '../Perfil/Perfi';
 import Post from '../Post/post';
 import FeedList from '../Card/CardList';
+import CalendarioB from '../Calendario/calendarioB';
 
 function Menu() {
     const [activeMenuItem, setActiveMenuItem] = useState('Home');
@@ -89,7 +90,7 @@ function Menu() {
                 <div className="post-and-feed">
                     <Post/>
                     <FeedList/>
-                </div>
+                    </div>
             )}
         </main>
     );

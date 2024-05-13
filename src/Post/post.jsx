@@ -16,7 +16,7 @@ function Post() {
 
 
  return (
-   <main>
+   <main className='mover'>
        <div className="middle">
      <form className="create-post">
        <div className="profile-pic">

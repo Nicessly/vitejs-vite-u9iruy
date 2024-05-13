@@ -27,21 +27,29 @@
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
   }
-   .user {
+
+  .user {
     display: flex;
     align-items: center;
     padding: 10px;
   }
-   .profile-pic img {
+  
+  .profile-pic img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    margin-right: 10px;
   }
-   .info h3 {
-    margin: 1rem;
+  
+  .info {
+    margin-top: -0.2rem;
+    margin-left: 10px; /* Agrega un margen entre la imagen de perfil y el h3 */
+  }
+  
+  .info h3 {
+    margin: 0; /* Ajusta el margen del h3 para eliminar cualquier espacio no deseado */
     font-size: 16px;
   }
+ 
 
    .photo img {
     width: 100%;
