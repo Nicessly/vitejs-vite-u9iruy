@@ -6,38 +6,58 @@
  }
 
  .perfil-facebook{
-  margin-left: 2.4rem;
+  margin-left: 1rem;
+  margin-right: -4rem;
+}
+
+.cover-photo {
+  width: 600px; /* Ancho de la portada */
+  height: 200px; /* Alto de la portada */
+  position: relative; /* Cambia a relativo para permitir el posicionamiento absoluto */
+  margin: 0 auto; /* Centra horizontalmente */
+}
+
+.portada {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen de portada */
 }
 
 
- .cover-photo {
-    width: 600px; /* Ancho de 851px */
-    height: 400px; /* Alto de 315px */
-  }
-  
-  .portada {
-    width: 100%;
-    height:200px ;
-    background-color: aqua;
-    position: absolute;
-  }
-  
-  
-  .foto-perfil {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: 43%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border: 5px solid #fff; /* Ajusta el color y el grosor del borde según sea necesario */
-  }
-  
-  .info {
-    text-align: center;
-    margin-top: -50px; /* Ajusta la separación entre la foto de perfil y la información del perfil según sea necesario */
-  }
+.profile-pic img {
+  display: block;
+  width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+  height: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+  object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+}
+
+.foto-perfil {
+  width: 150px;
+  height: 150px;
+  object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+  border-radius: 50%; /* Hacer el contenedor redondo */
+  position: absolute;
+  top: 98%; /* Centra verticalmente */
+  left: 50%; /* Centra horizontalmente */
+  transform: translate(-50%, -50%);
+  border: 5px solid #fff;
+}
+
+.infot {
+  position: absolute;
+  text-align: center;
+  top: 18rem;
+  left: 11rem;
+}
+
+.datos {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.datos span {
+  margin: 0 5px;
+}
   
   .datos {
     font-size: 16px;
@@ -48,3 +68,31 @@
     margin: 0 5px;
   }
   
+
+  @media screen and (max-width: 660px) {
+    .perfil-facebook {
+      top: -3rem;
+   }
+  
+   .perfil-facebook{
+    margin-left: 1rem;
+  }
+  
+  .cover-photo {
+    max-width: 368px; 
+    height: 200px; 
+    margin: 0 auto; 
+  }
+
+.infot {
+  position: absolute;
+  text-align: center;
+  top: 18rem;
+  left: 5rem;
+  font-size: 13px;
+}
+.datos{
+  font-size: 12px;
+}
+  
+  }

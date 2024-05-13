@@ -19,7 +19,7 @@ function Post() {
    <main className='mover'>
        <div className="middle">
      <form className="create-post">
-       <div className="profile-pic">
+       <div className="profile-pic f">
          <img src={Perfil} alt="Profile" />
        </div>
        <input type="text" className="in" placeholder="What's on your mind?" />
