@@ -23,7 +23,19 @@
   object-fit: cover; /* Ajusta la imagen de portada */
 }
 
+.porta{
+  color: white;
+  position: absolute;
+  top: 100%; /* Centra verticalmente */
+  left: 96.7%; /* Centra horizontalmente */
+}
 
+.perfi{
+  color: white;
+  position: absolute;
+  top: 117%; /* Centra verticalmente */
+  left: 65%; /* Centra horizontalmente */
+}
 .profile-pic img {
   display: block;
   width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
@@ -37,36 +49,30 @@
   object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
   border-radius: 50%; /* Hacer el contenedor redondo */
   position: absolute;
-  top: 98%; /* Centra verticalmente */
-  left: 50%; /* Centra horizontalmente */
+  top: 95%; /* Centra verticalmente */
+  left: 55%; /* Centra horizontalmente */
   transform: translate(-50%, -50%);
-  border: 5px solid #fff;
+  border: 4px solid hsl(0, 0%, 100%);
 }
 
 .infot {
   position: absolute;
-  text-align: center;
-  top: 18rem;
-  left: 11rem;
+  margin-top: 5rem;
+  margin-left: 14.9rem;
 }
 
-.datos {
-  font-size: 16px;
-  margin-top: 10px;
-}
 
 .datos span {
   margin: 0 5px;
 }
   
-  .datos {
+.datos {
     font-size: 16px;
     margin-top: 10px;
   }
+
+
   
-  .datos span {
-    margin: 0 5px;
-  }
   
 
   @media screen and (max-width: 660px) {
