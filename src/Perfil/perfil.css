@@ -102,3 +102,99 @@
 }
   
   }
+
+  /* Agrega estos estilos al final de tu archivo perfil.css */
+
+/* Estilos para el contenedor de biografía */
+.biografia {
+  margin-top: 20px;
+}
+
+.biography-container {
+  position: relative; /* Hacerlo relativo para posicionarlo correctamente debajo de .infot */
+  top: 150px; /* Ajustar según sea necesario para separarlo de .infot */
+  margin-left: 2rem; /* Centrar horizontalmente */
+  margin-right: auto; /* Centrar horizontalmente */
+    margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.biography-container div {
+  margin-bottom: 10px;
+}
+
+.edit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+}
+
+.edit-icon:hover {
+  background-color: #e0e0e0;
+}
+
+/* Estilos para el modal de edición */
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.edit-form {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+
+.edit-form h3 {
+  margin-bottom: 10px;
+}
+
+.edit-form div {
+  margin-bottom: 15px;
+}
+
+.edit-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.edit-form input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 14px;
+  margin-top: 3px;
+}
+
+.edit-form button {
+  padding: 8px 16px;
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.edit-form button:hover {
+  background-color: #45a049;
+}
