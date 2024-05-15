@@ -33,7 +33,7 @@
 .perfi{
   color: white;
   position: absolute;
-  top: 117%; /* Centra verticalmente */
+  top: 54%; /* Centra verticalmente */
   left: 65%; /* Centra horizontalmente */
 }
 .profile-pic img {
@@ -49,10 +49,10 @@
   object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
   border-radius: 50%; /* Hacer el contenedor redondo */
   position: absolute;
-  top: 95%; /* Centra verticalmente */
+  top: 43%; /* Centra verticalmente */
   left: 55%; /* Centra horizontalmente */
   transform: translate(-50%, -50%);
-  border: 4px solid hsl(0, 0%, 100%);
+  border: 4px solid hsl(0, 0%, 0%);
 }
 
 .infot {
@@ -67,6 +67,9 @@
 }
   
 .datos {
+  border-radius: 40px;
+  border: 4px solid rgb(223, 154, 7);
+  background-color: rgb(223, 154, 7);
     font-size: 16px;
     margin-top: 10px;
   }
@@ -103,11 +106,26 @@
   
   }
 
-  /* Agrega estos estilos al final de tu archivo perfil.css */
+  .biography {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Alinear los elementos a los extremos */
+  }
+  
+  .biography-container h3 {
+    display: inline; /* Mostrar en línea para que quede en la misma línea que el ícono */
+  }
+  
+  .edit-icon {
+    display: inline; /* Mostrar en línea */
+    cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
+    width: 30px;
+  height: 30px;
+  }
 
-/* Estilos para el contenedor de biografía */
-.biografia {
-  margin-top: 20px;
+
+.edit-icon:hover {
+  color: #e4b310;
 }
 
 .biography-container {
@@ -121,25 +139,45 @@
   border-radius: 8px;
 }
 
+
 .biography-container div {
   margin-bottom: 10px;
 }
 
-.edit-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #f0f0f0;
+.biography-container h3{
+  padding-bottom: 10px;
+}
+.biography-container input{
+  margin-left: 5px;
+}
+.biography-container input[type="text"] {
+  border: none; /* Borde gris claro */
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  outline: none; /* Eliminar contorno al enfocar */
 }
 
-.edit-icon:hover {
-  background-color: #e0e0e0;
+.biography-container input[type="text"]::placeholder {
+  color: #ffffff;
 }
 
+
+
+.biography-container .edit-icon {
+  margin-left: 5px;
+}
+
+/* Estilos para los nuevos iconos */
+.icon {
+  color: var(--color-primary);
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+  margin-bottom: -3px; 
+}
 /* Estilos para el modal de edición */
 .edit-modal {
   position: fixed;
@@ -198,3 +236,4 @@
 .edit-form button:hover {
   background-color: #45a049;
 }
+
