@@ -218,9 +218,9 @@ function Perfil() {
                     />
                   </div>
                   {/* Botones de acción */}
-                  <div>
-                    <button onClick={handleUpdateBiography}>Actualizar</button>
-                    <button onClick={handleCancelEdit}>Cancelar</button>
+                  <div className="botones">
+                    <button onClick={handleUpdateBiography} className='update'>Actualizar</button>
+                    <button onClick={handleCancelEdit} className='cancel'>Cancelar</button>
                   </div>
                 </div>
               </div>

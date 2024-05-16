@@ -133,7 +133,7 @@
 
 
 .edit-icon:hover {
-  color: #e4b310;
+  color: var(--color-primary);
 }
 
 
@@ -195,17 +195,21 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .edit-form {
-  background-color: #F5F5F5;
-  padding: 20px;
-  border-radius: 15px;
-  width: 400px;
+  width: 27rem;
+  height: 25rem;
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.074);
+  border: 1px solid rgba(255, 255, 255, 0.222);
+  backdrop-filter: blur(25px);
+  border-radius: 0.7rem;
+  transition: all ease 0.3s;
 }
 
 .edit-form h3 {
@@ -217,27 +221,31 @@
 }
 
 .edit-form label {
-  color: var(--color-primary);
+  color: white;
   display: block;
   font-weight: bold;
   margin-bottom: 5px;
   
 }
 
+.edit-form .icon {
+  color: white;
+  
+}
+
 .edit-form input[type="text"]::placeholder {
-  color: black;
+  color: rgb(255, 255, 255);
 }
 .edit-form input[type="text"] {
-  color: black;
+  color: rgb(255, 255, 255);
   transition: all .6s ease;
+  border: 1px solid white;
+}
+
+.edit-form input[type="text"]:focus{
   border: 1px solid var(--color-primary);
 }
 
-.edit-form input[type="text"]:focus {
-  color: black;
-  box-shadow: 4px 4px 6px -1px #f5ab0b33, 0 2px 4px -1px rgba(224, 209, 7, 0.219);
-
-}
 .edit-form input {
   width: 100%;
   padding: 8px;
@@ -248,26 +256,31 @@
   margin-top: 3px;
 }
 
-.edit-form button {
-  padding: 0.8rem 2rem;
-  font-weight: 500;
-  border-radius: 15px;
+.botones {
+  display: flex; /* Cambiar el contenedor a inline-block */
+}
+
+.update, .cancel {
+  flex: 1;
+  border-radius: 0.5rem;
+  width: calc(50% - 0.25rem); /* Calculamos el ancho de cada botón, restando el espacio entre ellos */
+  margin-right: 0.5rem; /* Espacio entre los botones */
+  padding: 0.75rem 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
   cursor: pointer;
-  transition: all 300ms ease;
-  border: none;
-  color: white;
-  background: var(--color-primary);
-  margin-right: 10px;
-  box-shadow: 0 4px 6px -1px #f5ab0b77, 0 2px 4px -1px rgba(224, 209, 7, 0.438);
-  transition: all .6s ease;
 }
 
-.edit-form button:hover {
-  background: #f5ab0bd2;
-  box-shadow: 0 10px 15px -3px #f5ab0b77, 0 2px 4px -1px rgba(224, 209, 7, 0.438);
+.update {
+  background-color: var(--color-primary);
+  color: rgba(255, 255, 255, 1);
 }
 
-.edit-form button:focus,button:active {
-  opacity: .85;
-  box-shadow: none;
+.cancel {
+  background-color: rgba(249, 250, 251, 1);
+  color: rgba(107, 114, 128, 1);
+  transition: all .15s ease;
 }

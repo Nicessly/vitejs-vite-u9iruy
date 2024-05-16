@@ -1,5 +1,5 @@
 import React from 'react';
-import Perfil from "./perfil.jpg"
+import { UilSignout } from '@iconscout/react-unicons'
 import './nav.css'
 
 function Nav() {
@@ -8,8 +8,8 @@ function Nav() {
       <div className="container">
         <h2 className="logo">ZYPHY</h2>
         <div className="create">
-          <div className="profile-pic v">
-            <img src={Perfil} alt="pic 1" />
+          <div className="profil">
+            <UilSignout />
           </div>
         </div>
       </div>
