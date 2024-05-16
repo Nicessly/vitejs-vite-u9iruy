@@ -14,6 +14,7 @@ function Perfil() {
   const defaultCoverPhoto = "https://img.freepik.com/foto-gratis/fondo-gris-liso-alta-calidad_53876-124606.jpg";
   const defaultProfilePhoto = "https://w7.pngwing.com/pngs/1000/665/png-transparent-computer-icons-profile-s-free-angle-sphere-profile-cliparts-free.png";
 
+  const MAX_BIO_LENGTH = 15;
   // Utilizar useState con valores iniciales
   const [coverPhoto, setCoverPhoto] = useState(defaultCoverPhoto);
   const [profilePhoto, setProfilePhoto] = useState(defaultProfilePhoto);
@@ -25,6 +26,8 @@ function Perfil() {
     hobbies: "",
     bio:""
   });
+
+  const [bioError, setBioError] = useState('');
 
   const handleCoverPhotoChange = (event) => {
     const newCoverPhoto = URL.createObjectURL(event.target.files[0]);
@@ -45,9 +48,15 @@ function Perfil() {
   }
 
   const handleUpdateBiography = () => {
+    if (biography.bio.length > MAX_BIO_LENGTH) {
+      setBioError(`No puede tener más de ${MAX_BIO_LENGTH} caracteres.`);
+      return;
+    }
+  
     setIsEditing(false);
     // Aquí podrías enviar los datos de la biografía al servidor o actualizar el estado en la aplicación principal
   }
+  
 
   const handleInputChange = (event) => {
     const { name, value } = event.target;
@@ -107,7 +116,7 @@ function Perfil() {
                   name="bio"
                   value={biography.bio}
                   readOnly // Hacerlo no editable
-                  placeholder="" // Agregar placeholder
+                  placeholder="Add Bio" // Agregar placeholder
                 />
               </div>
             {/* Seguidores y posts */}
@@ -118,11 +127,10 @@ function Perfil() {
           {/* Biografía */}
             <div className="biography-container">
             <div className="biography">
-            <h3>Biografía</h3>
-             {/* Icono de editar */}
-             <div className="edit-icon" onClick={handleEditClick}>
+            <div className="edit-icon" onClick={handleEditClick}>
                 <UilEdit />
               </div>
+            <h3>Biografía</h3>
               </div>
              {/* Campos de la biografía */}
             <div>
@@ -177,6 +185,7 @@ function Perfil() {
                   value={biography.bio}
                   onChange={handleInputChange}
                 />
+                {bioError && <p className="error-message">{bioError}</p>}
               </div>
                   <div>
                     <label htmlFor="studyEditInput"><UilBagAlt className="icon" />Estudio | Trabajo:</label>

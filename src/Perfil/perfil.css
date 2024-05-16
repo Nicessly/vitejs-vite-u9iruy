@@ -33,8 +33,8 @@
 .perfi{
   color: white;
   position: absolute;
-  top: 54%; /* Centra verticalmente */
-  left: 65%; /* Centra horizontalmente */
+  top: 63%; /* Centra verticalmente */
+  left: 30%; /* Centra horizontalmente */
 }
 .profile-pic img {
   display: block;
@@ -49,33 +49,33 @@
   object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
   border-radius: 50%; /* Hacer el contenedor redondo */
   position: absolute;
-  top: 43%; /* Centra verticalmente */
-  left: 55%; /* Centra horizontalmente */
+  top: 52%; /* Centra verticalmente */
+  left: 20%; /* Centra horizontalmente */
   transform: translate(-50%, -50%);
   border: 4px solid hsl(0, 0%, 0%);
 }
 
 .infot {
   position: absolute;
-  margin-top: 5rem;
-  margin-left: 15.2rem;
+  margin-top: 0.5rem;
+  margin-left: 13rem;
 }
 
-
-.datos span {
-  margin: 0 20px;
-}
-  
-.datos {
-  padding: 7px 2px;
-  border-radius: 40px;
-  background-color: rgb(223, 154, 7);
-    font-size: 16px;
+.datos{
+  font-size: 16px;
     margin-top: 10px;
-  }
+}
 
 
-  
+.info-bio input[type="text"] {
+  border: none; /* Borde gris claro */
+  background-color: transparent;
+  color: rgb(240, 151, 34);
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  outline: none; /* Eliminar contorno al enfocar */
+  cursor: default;
+}
   
 
   @media screen and (max-width: 660px) {
@@ -106,16 +106,24 @@
   
   }
 
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+    margin-top: 0.5em;
+  }
+  
+
   .biography {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Alinear los elementos a los extremos */
+
   }
   
   .biography-container h3 {
     display: inline; /* Mostrar en línea para que quede en la misma línea que el ícono */
   }
   
+
   .edit-icon {
     display: inline; /* Mostrar en línea */
     cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
@@ -129,23 +137,11 @@
 }
 
 
-.info-bio input[type="text"] {
-  border: none; /* Borde gris claro */
-  background-color: transparent;
-  color: rgb(240, 151, 34);
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  outline: none; /* Eliminar contorno al enfocar */
-  cursor: default;
-}
-
-
 .biography-container {
   position: relative; /* Hacerlo relativo para posicionarlo correctamente debajo de .infot */
-  top: 150px; /* Ajustar según sea necesario para separarlo de .infot */
-  margin-left: 6rem; /* Centrar horizontalmente */
+  top: 90px; /* Ajustar según sea necesario para separarlo de .infot */
+  margin-left: 2.8rem; /* Centrar horizontalmente */
   margin-right: auto; /* Centrar horizontalmente */
-
   padding: 20px;
   border-radius: 8px;
   width: 80%; /* Definir un ancho máximo para el contenedor */
@@ -209,7 +205,7 @@
   background-color: #F5F5F5;
   padding: 20px;
   border-radius: 15px;
-  width: 300px;
+  width: 400px;
 }
 
 .edit-form h3 {
