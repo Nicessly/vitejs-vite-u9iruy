@@ -22,7 +22,8 @@ function Perfil() {
     home: "",
     study: "",
     location: "",
-    hobbies: ""
+    hobbies: "",
+    bio:""
   });
 
   const handleCoverPhotoChange = (event) => {
@@ -99,6 +100,16 @@ function Perfil() {
           {/* Información del perfil */}
           <div className="infot">
             <h2>Lana Rose</h2>
+            <div className="info-bio">
+                <input
+                  type="text"
+                  id="bioEditInput"
+                  name="bio"
+                  value={biography.bio}
+                  readOnly // Hacerlo no editable
+                  placeholder="" // Agregar placeholder
+                />
+              </div>
             {/* Seguidores y posts */}
             <div className="datos">
               <span>Post subidos: 2</span>
@@ -114,102 +125,97 @@ function Perfil() {
               </div>
               </div>
              {/* Campos de la biografía */}
-<div>
-  <div>
-    <UilBagAlt className="icon" />
-    <label htmlFor="studyInput">Estudio:</label>
-    <input
-      type="text"
-      id="studyInput"
-      name="study"
-      value={biography.study}
-      readOnly // Hacerlo no editable
-      placeholder="None" // Agregar placeholder
-    />
-  </div>
-  <div>
-    <UilMapMarker className="icon" />
-    <label htmlFor="locationInput">Ubicación:</label>
-    <input
-      type="text"
-      id="locationInput"
-      name="location"
-      value={biography.location}
-      readOnly // Hacerlo no editable
-      placeholder="Escribe tu ubicación" // Agregar placeholder
-    />
-  </div>
-  <div>
-    <UilHeartAlt className="icon" />
-    <label htmlFor="hobbiesInput">Hobbies:</label>
-    <input
-      type="text"
-      id="hobbiesInput"
-      name="hobbies"
-      value={biography.hobbies}
-      readOnly // Hacerlo no editable
-      placeholder="Escribe tus hobbies" // Agregar placeholder
-    />
-  </div>
-</div>
+            <div>
+              <div>
+                <UilBagAlt className="icon" />
+                <label htmlFor="studyInput">Estudio | Trabajo:</label>
+                <input
+                  type="text"
+                  id="studyInput"
+                  name="study"
+                  value={biography.study}
+                  readOnly // Hacerlo no editable
+                  placeholder="" // Agregar placeholder
+                />
+              </div>
+              <div>
+                <UilMapMarker className="icon" />
+                <label htmlFor="locationInput">Ubicación:</label>
+                <input
+                  type="text"
+                  id="locationInput"
+                  name="location"
+                  value={biography.location}
+                  readOnly // Hacerlo no editable
+                  placeholder="" // Agregar placeholder
+                />
+              </div>
+              <div>
+                <UilHeartAlt className="icon" />
+                <label htmlFor="hobbiesInput">Hobbies:</label>
+                <input
+                  type="text"
+                  id="hobbiesInput"
+                  name="hobbies"
+                  value={biography.hobbies}
+                  readOnly // Hacerlo no editable
+                  placeholder="" // Agregar placeholder
+                />
+              </div>
+            </div>
 
-{/* Pantalla de edición */}
-{isEditing && (
-  <div className="edit-modal">
-    <div className="edit-form">
-      <h3>Editar Biografía</h3>
-      <div>
-        <label htmlFor="homeEditInput">Casa</label>
-        <input
-          type="text"
-          id="homeEditInput"
-          name="home"
-          value={biography.home}
-          onChange={handleInputChange}
-          placeholder="Escribe tu casa"
-        />
-      </div>
-      <div>
-        <label htmlFor="studyEditInput">Estudio</label>
-        <input
-          type="text"
-          id="studyEditInput"
-          name="study"
-          value={biography.study}
-          onChange={handleInputChange}
-          placeholder="Escribe tu estudio"
-        />
-      </div>
-      <div>
-        <label htmlFor="locationEditInput">Ubicación</label>
-        <input
-          type="text"
-          id="locationEditInput"
-          name="location"
-          value={biography.location}
-          onChange={handleInputChange}
-          placeholder="Escribe tu ubicación"
-        />
-      </div>
-      <div>
-        <label htmlFor="hobbiesEditInput">Hobbies</label>
-        <input
-          type="text"
-          id="hobbiesEditInput"
-          name="hobbies"
-          value={biography.hobbies}
-          onChange={handleInputChange}
-          placeholder="Escribe tus hobbies"
-        />
-      </div>
-      {/* Botones de acción */}
-      <div>
-        <button onClick={handleUpdateBiography}>Actualizar</button>
-        <button onClick={handleCancelEdit}>Cancelar</button>
-      </div>
-    </div>
-  </div>
-)}
+            {/* Pantalla de edición */}
+            {isEditing && (
+              <div className="edit-modal">
+                <div className="edit-form">
+                <div>
+                <label htmlFor="studyEditInput">Bio:</label>
+                <input
+                  type="text"
+                  id="bioEditInput"
+                  name="bio"
+                  value={biography.bio}
+                  onChange={handleInputChange}
+                />
+              </div>
+                  <div>
+                    <label htmlFor="studyEditInput"><UilBagAlt className="icon" />Estudio | Trabajo:</label>
+                    <input
+                      type="text"
+                      id="studyEditInput"
+                      name="study"
+                      value={biography.study}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="locationEditInput"><UilMapMarker className="icon" />Ubicación</label>
+                    <input
+                      type="text"
+                      id="locationEditInput"
+                      name="location"
+                      value={biography.location}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="hobbiesEditInput"><UilHeartAlt className="icon" />Hobbies</label>
+                    <input
+                      type="text"
+                      id="hobbiesEditInput"
+                      name="hobbies"
+                      value={biography.hobbies}
+                      onChange={handleInputChange}
+                    />
+                  </div>
+                  {/* Botones de acción */}
+                  <div>
+                    <button onClick={handleUpdateBiography}>Actualizar</button>
+                    <button onClick={handleCancelEdit}>Cancelar</button>
+                  </div>
+                </div>
+              </div>
+            )}
         </div>
         </div>
         </div>
