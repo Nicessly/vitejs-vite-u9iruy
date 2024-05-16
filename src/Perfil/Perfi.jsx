@@ -9,6 +9,7 @@ import { UilMapMarker } from '@iconscout/react-unicons'
 import { UilHeartAlt } from '@iconscout/react-unicons'
 import { UilEdit } from '@iconscout/react-unicons'
 import { UilCamera } from '@iconscout/react-unicons'
+import { UilAngleRight } from '@iconscout/react-unicons'
 
 function Perfil() {
   // Establecer imágenes por defecto para portada y foto de perfil
@@ -122,13 +123,10 @@ function Perfil() {
               </div>
               {/* Biografía */}
             <div className="biography-container">
-            <div className="biography">
-              </div>
              {/* Campos de la biografía */}
             <div>
               <div>
-                <UilBagAlt className="icon" />
-                <label htmlFor="studyInput">Estudio | Trabajo:</label>
+                <label htmlFor="studyInput">Ocupacion:</label>
                 <input
                   type="text"
                   id="studyInput"
@@ -139,7 +137,6 @@ function Perfil() {
                 />
               </div>
               <div>
-                <UilMapMarker className="icon" />
                 <label htmlFor="locationInput">Ubicación:</label>
                 <input
                   type="text"
@@ -151,7 +148,6 @@ function Perfil() {
                 />
               </div>
               <div>
-                <UilHeartAlt className="icon" />
                 <label htmlFor="hobbiesInput">Hobbies:</label>
                 <input
                   type="text"
@@ -180,7 +176,7 @@ function Perfil() {
                 {bioError && <p className="error-message">{bioError}</p>}
               </div>
                   <div>
-                    <label htmlFor="studyEditInput"><UilBagAlt className="icon" />Estudio | Trabajo:</label>
+                    <label htmlFor="studyEditInput"><UilBagAlt className="icon" />Ocupacion:</label>
                     <input
                       type="text"
                       id="studyEditInput"
@@ -220,11 +216,12 @@ function Perfil() {
         </div>
             {/* Seguidores y posts */}
             <div className="datos">
-              <span>Post subidos: 2</span>
+              <button>Post subidos: 2</button>
             </div>
           </div>
           
         </div>
+        
         </div>
     </main>
   );
