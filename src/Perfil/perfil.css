@@ -1,5 +1,9 @@
+.ct-perfi{
+  background-color: aqua;
+}
 
  .perfil-facebook {
+  
     width: 100%;
     position: relative;
     top: -1rem;
@@ -27,14 +31,15 @@
   color: white;
   position: absolute;
   top: 100%; /* Centra verticalmente */
-  left: 96.7%; /* Centra horizontalmente */
+  left: 95%; /* Centra horizontalmente */
 }
 
 .perfi{
+  width: 20px;
   color: white;
   position: absolute;
-  top: 63%; /* Centra verticalmente */
-  left: 30%; /* Centra horizontalmente */
+  top: 124%; /* Centra verticalmente */
+  left: 29%; /* Centra horizontalmente */
 }
 .profile-pic img {
   display: block;
@@ -49,7 +54,7 @@
   object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
   border-radius: 50%; /* Hacer el contenedor redondo */
   position: absolute;
-  top: 52%; /* Centra verticalmente */
+  top: 100%; /* Centra verticalmente */
   left: 20%; /* Centra horizontalmente */
   transform: translate(-50%, -50%);
   border: 4px solid hsl(0, 0%, 0%);
@@ -111,51 +116,15 @@
     font-size: 0.8em;
     margin-top: 0.5em;
   }
-  
-
-  .biography {
-    display: flex;
-    align-items: center;
-
-  }
-  
-  .biography-container h3 {
-    display: inline; /* Mostrar en línea para que quede en la misma línea que el ícono */
-  }
-  
 
   .edit-icon {
-    display: inline; /* Mostrar en línea */
+    margin-bottom: -4px;
     cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
-    width: 30px;
-  height: 30px;
+    width: 18px;
+  margin-left: 1rem;
   }
 
 
-.edit-icon:hover {
-  color: var(--color-primary);
-}
-
-
-.biography-container {
-  position: relative; /* Hacerlo relativo para posicionarlo correctamente debajo de .infot */
-  top: 90px; /* Ajustar según sea necesario para separarlo de .infot */
-  margin-left: 2.8rem; /* Centrar horizontalmente */
-  margin-right: auto; /* Centrar horizontalmente */
-  padding: 20px;
-  border-radius: 8px;
-  width: 80%; /* Definir un ancho máximo para el contenedor */
-  max-width: 400px;
-}
-
-
-.biography-container div {
-  margin-bottom: 10px;
-}
-
-.biography-container h3{
-  padding-bottom: 10px;
-}
 .biography-container input{
   margin-left: 5px;
 }
@@ -175,16 +144,10 @@
 }
 
 
-
-.biography-container .edit-icon {
-  margin-left: 5px;
-}
-
 /* Estilos para los nuevos iconos */
 .icon {
-  color: var(--color-primary);
-  width: 20px;
-  height: 20px;
+  color: rgba(255, 181, 43, 0.671);
+  width: 17px;
   margin-right: 5px;
   margin-bottom: -3px; 
 }

@@ -8,6 +8,7 @@ import { UilMapMarker } from '@iconscout/react-unicons'
 import { UilHeartAlt } from '@iconscout/react-unicons'
 import { UilEdit } from '@iconscout/react-unicons'
 import { UilEllipsisV } from '@iconscout/react-unicons'
+import { UilCamera } from '@iconscout/react-unicons'
 
 function Perfil() {
   // Establecer imágenes por defecto para portada y foto de perfil
@@ -78,7 +79,7 @@ function Perfil() {
               className="portada"
             />
             <label htmlFor="coverPhotoInput">
-              <UilImageEdit className="porta" />
+              <UilCamera className="porta" />
               <input
                 id="coverPhotoInput"
                 type="file"
@@ -108,7 +109,7 @@ function Perfil() {
           </div>
           {/* Información del perfil */}
           <div className="infot">
-            <h2>Lana Rose</h2>
+            <h2>Lana Rose<UilEdit className="edit-icon" onClick={handleEditClick}/></h2>
             <div className="info-bio">
                 <input
                   type="text"
@@ -119,18 +120,9 @@ function Perfil() {
                   placeholder="Add Bio" // Agregar placeholder
                 />
               </div>
-            {/* Seguidores y posts */}
-            <div className="datos">
-              <span>Post subidos: 2</span>
-            </div>
-          </div>
-          {/* Biografía */}
+              {/* Biografía */}
             <div className="biography-container">
             <div className="biography">
-            <div className="edit-icon" onClick={handleEditClick}>
-                <UilEdit />
-              </div>
-            <h3>Biografía</h3>
               </div>
              {/* Campos de la biografía */}
             <div>
@@ -226,6 +218,11 @@ function Perfil() {
               </div>
             )}
         </div>
+            {/* Seguidores y posts */}
+            <div className="datos">
+              <span>Post subidos: 2</span>
+            </div>
+          </div>
         </div>
         </div>
     </main>
