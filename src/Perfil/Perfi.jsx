@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import "./perfil.css"
 import PerfilImg from "./perfil.jpg"
@@ -7,7 +8,6 @@ import { UilBagAlt} from '@iconscout/react-unicons'
 import { UilMapMarker } from '@iconscout/react-unicons'
 import { UilHeartAlt } from '@iconscout/react-unicons'
 import { UilEdit } from '@iconscout/react-unicons'
-import { UilEllipsisV } from '@iconscout/react-unicons'
 import { UilCamera } from '@iconscout/react-unicons'
 
 function Perfil() {
@@ -109,7 +109,7 @@ function Perfil() {
           </div>
           {/* Información del perfil */}
           <div className="infot">
-            <h2>Lana Rose<UilEdit className="edit-icon" onClick={handleEditClick}/></h2>
+            <h2>Lana Rose <UilEdit className="edit-icon" onClick={handleEditClick}/></h2>
             <div className="info-bio">
                 <input
                   type="text"
@@ -223,6 +223,7 @@ function Perfil() {
               <span>Post subidos: 2</span>
             </div>
           </div>
+          
         </div>
         </div>
     </main>

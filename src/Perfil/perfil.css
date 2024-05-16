@@ -1,249 +1,279 @@
-.ct-perfi{
-  background-color: aqua;
+
+.perfil-facebook {
+  width: 100%;
+  position: relative;
+  top: -1rem;
 }
 
- .perfil-facebook {
-  
-    width: 100%;
-    position: relative;
-    top: -1rem;
- }
-
- .perfil-facebook{
-  margin-left: 1rem;
-  margin-right: -4rem;
+.perfil-facebook{
+margin-left: 1rem;
+margin-right: -4rem;
 }
 
 .cover-photo {
-  width: 600px; /* Ancho de la portada */
-  height: 200px; /* Alto de la portada */
-  position: relative; /* Cambia a relativo para permitir el posicionamiento absoluto */
-  margin: 0 auto; /* Centra horizontalmente */
+width: 600px; /* Ancho de la portada */
+height: 200px; /* Alto de la portada */
+position: relative; /* Cambia a relativo para permitir el posicionamiento absoluto */
+margin: 0 auto; /* Centra horizontalmente */
 }
 
 .portada {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Ajusta la imagen de portada */
+width: 100%;
+height: 100%;
+object-fit: cover; /* Ajusta la imagen de portada */
 }
 
 .porta{
-  color: white;
-  position: absolute;
-  top: 100%; /* Centra verticalmente */
-  left: 95%; /* Centra horizontalmente */
+color: white;
+position: absolute;
+top: 100%; /* Centra verticalmente */
+left: 96.7%; /* Centra horizontalmente */
 }
 
 .perfi{
-  width: 20px;
-  color: white;
-  position: absolute;
-  top: 124%; /* Centra verticalmente */
-  left: 29%; /* Centra horizontalmente */
+color: white;
+position: absolute;
+width: 20px;
+top: 120%; /* Centra verticalmente */
+left: 28%; /* Centra horizontalmente */
 }
 .profile-pic img {
-  display: block;
-  width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
-  height: 100%; /* Hacer que la imagen ocupe todo el contenedor */
-  object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+display: block;
+width: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+height: 100%; /* Hacer que la imagen ocupe todo el contenedor */
+object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
 }
 
 .foto-perfil {
-  width: 150px;
-  height: 150px;
-  object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
-  border-radius: 50%; /* Hacer el contenedor redondo */
-  position: absolute;
-  top: 100%; /* Centra verticalmente */
-  left: 20%; /* Centra horizontalmente */
-  transform: translate(-50%, -50%);
-  border: 4px solid hsl(0, 0%, 0%);
+width: 150px;
+height: 150px;
+object-fit: cover; /* Ajustar la imagen para que cubra el contenedor sin distorsión */
+border-radius: 50%; /* Hacer el contenedor redondo */
+position: absolute;
+top: 100%; /* Centra verticalmente */
+left: 18%; /* Centra horizontalmente */
+transform: translate(-50%, -50%);
+border: 4px solid hsl(0, 0%, 0%);
 }
 
 .infot {
-  position: absolute;
-  margin-top: 0.5rem;
-  margin-left: 13rem;
+position: absolute;
+margin-top: 0.5rem;
+margin-left: 13rem;
 }
 
 .datos{
-  font-size: 16px;
-    margin-top: 10px;
+font-size: 16px;
+  margin-top: 10px;
 }
 
 
 .info-bio input[type="text"] {
-  border: none; /* Borde gris claro */
-  background-color: transparent;
-  color: rgb(240, 151, 34);
-  font-size: 14px;
-  font-family: "Montserrat", sans-serif;
-  outline: none; /* Eliminar contorno al enfocar */
-  cursor: default;
+border: none; /* Borde gris claro */
+background-color: transparent;
+color: rgb(240, 151, 34);
+font-size: 14px;
+font-family: "Montserrat", sans-serif;
+outline: none; /* Eliminar contorno al enfocar */
+cursor: default;
 }
-  
 
-  @media screen and (max-width: 660px) {
-    .perfil-facebook {
-      top: -3rem;
-   }
-  
-   .perfil-facebook{
-    margin-left: 1rem;
-  }
-  
-  .cover-photo {
-    max-width: 368px; 
-    height: 200px; 
-    margin: 0 auto; 
-  }
 
-.infot {
-  position: absolute;
-  text-align: center;
-  top: 18rem;
-  left: 5rem;
-  font-size: 13px;
+.error-message {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 0.5em;
 }
-.datos{
-  font-size: 12px;
+
+
+.biography {
+  display: flex;
+  align-items: center;
+
 }
-  
-  }
 
-  .error-message {
-    color: red;
-    font-size: 0.8em;
-    margin-top: 0.5em;
-  }
-
-  .edit-icon {
-    margin-bottom: -4px;
-    cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
-    width: 18px;
-  margin-left: 1rem;
-  }
+.biography-container h3 {
+  display: inline; /* Mostrar en línea para que quede en la misma línea que el ícono */
+}
 
 
+.edit-icon {
+  display: inline; /* Mostrar en línea */
+  cursor: pointer; /* Cambiar el cursor a un puntero cuando se pasa por encima */
+  width: 30px;
+height: 30px;
+}
+
+
+.edit-icon:hover {
+color: var(--color-primary);
+}
+
+
+
+
+
+.biography-container div {
+margin-bottom: 10px;
+}
+
+.biography-container h3{
+padding-bottom: 10px;
+}
 .biography-container input{
-  margin-left: 5px;
+margin-left: 5px;
 }
 .biography-container input[type="text"] {
-  border: none; /* Borde gris claro */
-  background-color: transparent;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 600;
-  font-family: "Montserrat", sans-serif;
-  outline: none; /* Eliminar contorno al enfocar */
-  cursor: default;
+border: none; /* Borde gris claro */
+background-color: transparent;
+color: #ffffff;
+font-size: 14px;
+font-weight: 600;
+font-family: "Montserrat", sans-serif;
+outline: none; /* Eliminar contorno al enfocar */
+cursor: default;
 }
 
 .biography-container input[type="text"]::placeholder {
-  color: #ffffff;
+color: #ffffff;
 }
 
+
+
+.biography-container .edit-icon {
+margin-left: 5px;
+}
 
 /* Estilos para los nuevos iconos */
 .icon {
-  color: rgba(255, 181, 43, 0.671);
-  width: 17px;
-  margin-right: 5px;
-  margin-bottom: -3px; 
+color: var(--color-primary);
+width: 20px;
+height: 20px;
+margin-right: 5px;
+margin-bottom: -3px; 
 }
 /* Estilos para el modal de edición */
 .edit-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
-  display: flex;
-  justify-content: center;
-  align-items: center;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.6); /* Fondo oscuro semi-transparente */
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
 .edit-form {
-  width: 27rem;
-  height: 25rem;
-  padding: 1rem;
-  background-color: rgba(255, 255, 255, 0.074);
-  border: 1px solid rgba(255, 255, 255, 0.222);
-  backdrop-filter: blur(25px);
-  border-radius: 0.7rem;
-  transition: all ease 0.3s;
+width: 27rem;
+height: 25rem;
+padding: 1rem;
+background-color: rgba(255, 255, 255, 0.074);
+border: 1px solid rgba(255, 255, 255, 0.222);
+backdrop-filter: blur(25px);
+border-radius: 0.7rem;
+transition: all ease 0.3s;
 }
 
 .edit-form h3 {
-  margin-bottom: 10px;
+margin-bottom: 10px;
 }
 
 .edit-form div {
-  margin-bottom: 15px;
+margin-bottom: 15px;
 }
 
 .edit-form label {
-  color: white;
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  
+color: white;
+display: block;
+font-weight: bold;
+margin-bottom: 5px;
+
 }
 
 .edit-form .icon {
-  color: white;
-  
+color: white;
+
 }
 
 .edit-form input[type="text"]::placeholder {
-  color: rgb(255, 255, 255);
+color: rgb(255, 255, 255);
 }
 .edit-form input[type="text"] {
-  color: rgb(255, 255, 255);
-  transition: all .6s ease;
-  border: 1px solid white;
+color: rgb(255, 255, 255);
+transition: all .6s ease;
+border: 1px solid white;
 }
 
 .edit-form input[type="text"]:focus{
-  border: 1px solid var(--color-primary);
+border: 1px solid var(--color-primary);
 }
 
 .edit-form input {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid var(--color-primary);
-  border-radius: 4px;
-  box-sizing: border-box;
-  font-size: 14px;
-  margin-top: 3px;
+width: 100%;
+padding: 8px;
+border: 1px solid var(--color-primary);
+border-radius: 4px;
+box-sizing: border-box;
+font-size: 14px;
+margin-top: 3px;
 }
 
 .botones {
-  display: flex; /* Cambiar el contenedor a inline-block */
+display: flex; /* Cambiar el contenedor a inline-block */
 }
 
 .update, .cancel {
-  flex: 1;
-  border-radius: 0.5rem;
-  width: calc(50% - 0.25rem); /* Calculamos el ancho de cada botón, restando el espacio entre ellos */
-  margin-right: 0.5rem; /* Espacio entre los botones */
-  padding: 0.75rem 1.25rem;
-  text-align: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-  margin-top: 0.5rem;
-  cursor: pointer;
+flex: 1;
+border-radius: 0.5rem;
+width: calc(50% - 0.25rem); /* Calculamos el ancho de cada botón, restando el espacio entre ellos */
+margin-right: 0.5rem; /* Espacio entre los botones */
+padding: 0.75rem 1.25rem;
+text-align: center;
+font-size: 0.875rem;
+line-height: 1.25rem;
+font-weight: 600;
+margin-top: 0.5rem;
+cursor: pointer;
 }
 
 .update {
-  background-color: var(--color-primary);
-  color: rgba(255, 255, 255, 1);
+background-color: var(--color-primary);
+color: rgba(255, 255, 255, 1);
 }
 
 .cancel {
-  background-color: rgba(249, 250, 251, 1);
-  color: rgba(107, 114, 128, 1);
-  transition: all .15s ease;
+background-color: rgba(249, 250, 251, 1);
+color: rgba(107, 114, 128, 1);
+transition: all .15s ease;
+}
+
+
+@media screen and (max-width: 660px) {
+  .perfil-facebook {
+    top: -3rem;
+ }
+
+ .perfil-facebook{
+  margin-left: 1rem;
+}
+
+.cover-photo {
+  max-width: 368px; 
+  height: 200px; 
+  margin: 0 auto; 
+}
+
+.infot {
+position: absolute;
+text-align: center;
+top: 18rem;
+left: 5rem;
+font-size: 13px;
+}
+.datos{
+font-size: 12px;
+}
+
 }
