@@ -1,4 +1,5 @@
 
+
 .perfil-facebook {
   width: 100%;
   position: relative;
@@ -268,32 +269,65 @@ background-color: rgba(249, 250, 251, 1);
 color: rgba(107, 114, 128, 1);
 transition: all .15s ease;
 }
-
-
-@media screen and (max-width: 660px) {
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
   .perfil-facebook {
-    top: -3rem;
- }
+    max-width: 370px;
+    top: -4rem;
+  }
 
- .perfil-facebook{
-  margin-left: 1rem;
-}
+  .cover-photo {
+    width: 100%; /* Ancho de la portada */
+    height: 200px; /* Alto de la portada */
+    margin: 0 auto; /* Centra horizontalmente */
+  }
 
-.cover-photo {
-  max-width: 368px; 
-  height: 200px; 
-  margin: 0 auto; 
-}
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 100%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+  }
 
-.infot {
-position: absolute;
-text-align: center;
-top: 18rem;
-left: 5rem;
-font-size: 13px;
-}
-.datos{
-font-size: 12px;
-}
+  .porta{
+    top: 89%; /* Centra verticalmente */
+    left: 0.5%; /* Centra horizontalmente */
+    }
+    
+    .perfi{
+    width: 19px;
+    top: 114%; /* Centra verticalmente */
+    left: 30%; /* Centra horizontalmente */
+    }
 
+  .infot {
+    margin-top: 4rem;
+    margin-left: 0.5rem;
+  }
+
+  .datos button {
+    margin: 0.5rem 0.1rem;
+    padding: 8px 12px;
+    font-size: 12px;
+  }
+
+  .edit-modal {
+    width: 96%;
+  }
+
+  .edit-form {
+    max-width: 94%;
+    padding: 1rem;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .update, .cancel {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
 }
