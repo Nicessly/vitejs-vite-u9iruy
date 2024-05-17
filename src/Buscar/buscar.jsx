@@ -46,12 +46,13 @@ const BuscarPersonas = () => {
           <div className="search-bar">
             <input
               type="search"
-              placeholder="Buscar personas..."
+              placeholder="Buscar..."
               value={query}
               onChange={handleInputChange}
               className="search-input"
             />
           </div>
+          <hr></hr>
           <div className="results">
             {results.map(persona => (
               <div key={persona.id} className="message">

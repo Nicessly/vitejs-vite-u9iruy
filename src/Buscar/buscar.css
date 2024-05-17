@@ -33,25 +33,31 @@ margin-left: 1rem;
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #E5E5E5;
-  padding: 9px;
+  background-color: #eeeeee;
   border-radius: 9px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
 }
 
 .search-input {
+  font-family: "Montserrat", sans-serif;
+  padding: 10px 8px;
   width: 100%;
   border: none;
   outline: none;
-  padding: 10px;
-  border-radius: 30px;
+  background-color: transparent;
 }
 
 .search-input::placeholder {
   color: #aaaaaa;
 }
 
+hr {
+  border: none;
+  height: 1px; /* Grosor de la línea */
+  background-color: #ccc; /* Color de la línea */
+  margin: 20px 0; /* Margen superior e inferior */
+}
 /* Resultados */
 .results {
   display: flex;
@@ -63,10 +69,7 @@ margin-left: 1rem;
 .message {
   display: flex;
   align-items: center;
-  background-color: #ffffff;
-  padding: 10px;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 4px;
 }
 
 .profile-pic {
