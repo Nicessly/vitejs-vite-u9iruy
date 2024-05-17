@@ -67,9 +67,9 @@ function Perfil() {
       [name]: value
     }));
   }
-
   
 
+  
 
   return (
     <main className='mover'>
