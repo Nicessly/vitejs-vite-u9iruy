@@ -38,11 +38,9 @@ const BuscarPersonas = () => {
 
   return (
     <main>
-      <div className="container">
-        <div className="right">
         <div className="messages">
           <div className="heading">
-            <h4>Search</h4>
+            <h4>Busqueda</h4>
             <span><i><UilUsersAlt/></i></span>
           </div>
           <div className="search-bar">
@@ -64,8 +62,6 @@ const BuscarPersonas = () => {
               </div>
             ))}
           </div>
-        </div>
-        </div>
       </div>
     </main>
   );

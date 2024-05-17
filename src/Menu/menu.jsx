@@ -57,9 +57,9 @@ function Menu() {
                         </a>
                         <a 
                             className={`menu-item ${activeMenuItem === 'Explore' ? 'active' : ''}`} 
-                            onClick={() => handleMenuItemClick('Explore')}
+                            onClick={toggleSearchModal}
                         >
-                            <span className='i' onClick={toggleSearchModal}><UilSearch/></span><h3 onClick={toggleSearchModal}>Explore</h3>
+                            <span className='i'><UilSearch/></span><h3>Explore</h3>
                         </a>
                         <a 
                             className={`menu-item ${activeMenuItem === 'ZyRoom' ? 'active' : ''}`} 
@@ -73,13 +73,12 @@ function Menu() {
                         >
                             <span className='i'><UilSetting/></span><h3>Settings</h3>
                         </a>
-                       
                     </div>
                 </div>
             </div>
             {showSearchModal && (
                 <div className="modal-background" onClick={closeSearchModal}>
-                    <div className="modal" onClick={preventClosingModal}>
+                    <div className={`modal ${showSearchModal ? 'show' : ''}`} onClick={preventClosingModal}>
                         <BuscarPersonas/>
                     </div>
                 </div>
@@ -90,7 +89,7 @@ function Menu() {
                 <div className="post-and-feed">
                     <Post/>
                     <FeedList/>
-                    </div>
+                </div>
             )}
         </main>
     );
