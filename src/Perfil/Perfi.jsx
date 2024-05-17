@@ -68,6 +68,9 @@ function Perfil() {
     }));
   }
 
+  
+
+
   return (
     <main className='mover'>
       <div className="middle">
@@ -109,6 +112,7 @@ function Perfil() {
             </label>
           </div>
           {/* Información del perfil */}
+          <div className="algo"></div>
           <div className="infot">
             <h2>Lana Rose <UilEdit className="edit-icon" onClick={handleEditClick}/></h2>
             <div className="info-bio">
@@ -217,11 +221,10 @@ function Perfil() {
             {/* Seguidores y posts */}
             <div className="datos">
               <button>Post subidos: 2</button>
+              <button className='megusta'>Valorar Perfil</button>
+          </div>
             </div>
           </div>
-          
-        </div>
-        
         </div>
     </main>
   );
