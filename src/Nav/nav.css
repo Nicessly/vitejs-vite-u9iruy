@@ -38,9 +38,6 @@ nav .create{
 }
 
 @media screen and (max-width: 660px) {
-    .v{
-      margin-left: 10rem;
-  }
   .logo{
     margin-left: 0
   }
