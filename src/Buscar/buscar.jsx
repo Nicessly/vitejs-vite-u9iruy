@@ -40,7 +40,7 @@ const BuscarPersonas = () => {
     <main>
         <div className="messages">
           <div className="heading">
-            <h4>Busqueda</h4>
+            <h4>Buscar Zy</h4>
             <span><i><UilUsersAlt/></i></span>
           </div>
           <div className="search-bar">
@@ -53,6 +53,7 @@ const BuscarPersonas = () => {
             />
           </div>
           <hr></hr>
+          <h5 className='resultado'>Resultados</h5>
           <div className="results">
             {results.map(persona => (
               <div key={persona.id} className="message">

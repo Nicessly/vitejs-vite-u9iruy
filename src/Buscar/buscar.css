@@ -3,12 +3,12 @@
 .messages {
   position: relative;
   top: -1rem;
-  width: 250px;
+  width: 280px;
   padding: 20px;
 }
 
 .messages{
-margin-left: 1rem;
+margin-left: 0.5rem;
 }
 /* Encabezado */
 .heading {
@@ -21,27 +21,32 @@ margin-left: 1rem;
 .heading h4 {
   font-size: 20px;
   margin: 0;
-  color: #333333;
+  color: var(--color-primary);
 }
 
 .heading i {
-  font-size: 24px;
-  color: #333333;
+  font-size: 27px;
+  color: var(--color-primary);
 }
 
+.resultado{
+  font-weight: 200;
+  margin-bottom: 13px;
+}
 /* Barra de búsqueda */
 .search-bar {
   display: flex;
   align-items: center;
-  background-color: #eeeeee;
-  border-radius: 9px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  border-radius: 6px;
   margin-bottom: 20px;
 }
 
 .search-input {
   font-family: "Montserrat", sans-serif;
   padding: 10px 8px;
+  color: #f1f1f1;
   width: 100%;
   border: none;
   outline: none;
@@ -55,15 +60,10 @@ margin-left: 1rem;
 hr {
   border: none;
   height: 1px; /* Grosor de la línea */
-  background-color: #ccc; /* Color de la línea */
+  background-color:var(--color-primary);
   margin: 20px 0; /* Margen superior e inferior */
 }
-/* Resultados */
-.results {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
+
 
 /* Mensaje individual */
 .message {
@@ -89,7 +89,16 @@ hr {
 
 .message-body {
   margin: 0;
-  color: #333333;
+  margin-bottom: 1rem;
+  color: #ffffff;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-height: 200px; /* Ajusta el valor según sea necesario */
+  overflow-y: auto; /* Agrega un scrollbar vertical cuando el contenido excede la altura máxima */
 }
 
 /* Estilo del scroll */
@@ -126,7 +135,12 @@ background: #555;
   cursor: pointer; /* Añade cursor pointer */
 }
 
-
+@media (max-width: 600px) {
+  .messages {
+    width: calc(100% - 1rem); /* Ancho del 100% menos el margen izquierdo adicional */
+    margin-left: 1rem; /* Elimina el margen izquierdo en dispositivos móviles */
+  }
+}
 
 
 
