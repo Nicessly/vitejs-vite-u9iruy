@@ -92,8 +92,6 @@ margin-left: 13rem;
 }
 
 
-
-
 .info-bio input[type="text"] {
   margin-top: 0.2rem;
   margin-bottom: 0.2rem;
@@ -269,6 +267,9 @@ background-color: rgba(249, 250, 251, 1);
 color: rgba(107, 114, 128, 1);
 transition: all .15s ease;
 }
+
+
+
 /* Estilos para dispositivos móviles */
 @media only screen and (max-width: 600px) {
   .perfil-facebook {
@@ -276,9 +277,10 @@ transition: all .15s ease;
     top: -4rem;
   }
 
+
   .cover-photo {
     width: 100%; /* Ancho de la portada */
-    height: 200px; /* Alto de la portada */
+    height: 180px; /* Alto de la portada */
     margin: 0 auto; /* Centra horizontalmente */
   }
 
