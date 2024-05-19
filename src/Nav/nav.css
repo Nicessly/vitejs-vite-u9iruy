@@ -69,9 +69,9 @@ nav .create{
 
 .modall-content {
   background-color: #fff;
-  width: 300px;
+  width: 297px;
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   position: relative;
 
@@ -80,7 +80,8 @@ nav .create{
 .modall-content{animation:scale-up-center 0.2s; } @keyframes scale-up-center{ 0%{transform:scale(.5)} 100%{transform:scale(1)} }
 
 .h4{
-  margin-top: 0.5rem;
+  font-size: 20px;
+  margin-top: 2rem;
   text-align: center;
   color: black;
 }
@@ -104,10 +105,10 @@ nav .create{
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  margin-right: 10px;
-  justify-content: center;
+  width: 48%;
   margin-bottom: 0.3rem;
-  width: 100%; /* Ajusta el ancho de los botones */
+  margin-right: 0.3rem;
+  margin-top: 1rem;
 }
 
 .aceptar{
@@ -117,10 +118,11 @@ nav .create{
 }
 
 .negar{
-  background-color: rgb(240, 240, 240);
-  color: hsl(0, 0%, 0%);
+  background-color: rgb(170, 170, 170);
+  color: rgb(255, 255, 255);
   font-weight: 500;
 }
+
 
 .modall-content button:last-child {
   margin-right: 0;

@@ -36,7 +36,7 @@ function Nav() {
         <div className="modall show">
           <div className="modall-content">
           <img src={log} className='log'/>
-          <h4 className='h4'>ComeBack Some!</h4>
+          <h4 className='h4'>Comeback Soon!</h4>
             <p>Are you sure yoy want<br/> to logout?</p>
             <button onClick={handleCloseModal} className='negar'>Cancel</button>
             <button onClick={handleAcceptLogout} className='aceptar'>Yes, logout</button>
