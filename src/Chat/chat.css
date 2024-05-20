@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+/* Estilos generales */
+.chat-container {
+    background: url('./chaf.png') no-repeat center center/cover; /* Cambia a la URL de tu imagen */
+    background-attachment: fixed;
+    background-size: cover;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  
+  /* Estilos para las pantallas */
+  .welcome-screen, .rules-screen, .final-screen {
+    text-align: center;
+    position: relative; /* Para posicionar los indicadores de navegación */
+  }
+  
+  /* Estilos para la imagen del logo */
+  .welcome-screen img, .rules-screen img, .final-screen img {
+    width: 100px; /* Ajusta el tamaño según sea necesario */
+    margin-bottom: 20px;
+  }
+
+  .welcome-screen img {
+    width: 110px; /* Ajusta el tamaño del logo según tu preferencia */
+    margin-right: 20px; /* Ajusta el margen derecho según tu preferencia */
+    margin-bottom: 1rem; /* Ajusta el margen inferior según tu preferencia */
+    margin-top: -20px; /* Ajusta el margen superior según tu preferencia */
+    animation: fadeInDown 1.5s ease-out;
+  }
+
+  .welcome-screen h1{
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+
+  }
+
+  .welcome-screen button {
+    font-family: "Nunito", sans-serif;
+    border: none;
+    background-color: white;
+    color: orange;
+    font-weight: 800;
+    padding: 15px 20px; /* Aumenta el relleno para hacer el botón más grande */
+    border-radius: 100px;
+    margin-left: 0.3rem;
+    cursor: pointer;
+    margin-top: 1rem;
+    animation: fadeInUp 1.5s ease-out;
+  }
+
+  .welcome-screen button:hover{
+    box-shadow: 0 0 0 5px orange;
+  }
+  
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+
+  /* Estilos para los botones */
+  .rules-screen button, .final-screen button {
+    margin: 10px;
+  }
+  
+  /* Estilos para los indicadores de navegación */
+  .navigation-indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navigation-circle {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    background-color: #ccc; /* Color de los círculos inactivos */
+  }
+  
+  .navigation-circle.active {
+    background-color: orange; /* Color del círculo activo */
+  }
+
+  .rules-screen img{
+    width: 200px; /* Ajusta el tamaño del logo según tu preferencia */
+    margin-right: 20px; /* Ajusta el margen derecho según tu preferencia */
+    margin-bottom: 1rem; /* Ajusta el margen inferior según tu preferencia */
+    margin-top: -20px; /* Ajusta el margen superior según tu preferencia */
+  }
+  
