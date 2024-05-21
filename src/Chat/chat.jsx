@@ -19,6 +19,7 @@ function Chat() {
     setScreen('final'); // Cambia a la pantalla final cuando se hace clic en la flecha hacia adelante en la pantalla de reglas
   };
 
+
   // Renderiza la pantalla apropiada según el estado actual
   const renderScreen = () => {
     switch (screen) {
@@ -27,13 +28,14 @@ function Chat() {
           <div className="welcome-screen">
             <img src={Lochat} alt="Lochat logo" />
             <h1>Welcome to ZyRoom</h1>
+            <p>Conectando a todos</p>
             <button onClick={handleStartChat}>Let's Start</button>
           </div>
         );
       case 'rules':
         return (
           <div className="rules-screen">
-            <img src={rules} alt="Lochat logo"/>
+        <img src={rules}  className="rules-img"/>
             <h1>Rules</h1>
             <p>Some rules here...</p>
             <div>
