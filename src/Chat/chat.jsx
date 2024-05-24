@@ -1,82 +1,66 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './chat.css';
-import Lochat from "./chat.png";
-import rules from "./rules.png"
+import Lochat from "./well.png";
 
+function chat() {
+  const [currentScreen, setCurrentScreen] = useState('splash');
 
-function Chat() {
-  const [screen, setScreen] = useState('welcome'); // Estado para controlar qué pantalla se muestra
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setCurrentScreen('welcome');
+    }, 6000); // Duración de la pantalla de splash más tiempo de animación
 
-  const handleStartChat = () => {
-    setScreen('rules'); // Cambia a la pantalla de reglas cuando se hace clic en "Let's Start"
-  };
+    return () => clearTimeout(timer);
+  }, []);
 
-  const handleGoBack = () => {
-    setScreen('welcome'); // Cambia a la pantalla de bienvenida cuando se hace clic en la flecha de regreso
-  };
-
-  const handleGoForward = () => {
-    setScreen('final'); // Cambia a la pantalla final cuando se hace clic en la flecha hacia adelante en la pantalla de reglas
-  };
-
-
-  // Renderiza la pantalla apropiada según el estado actual
-  const renderScreen = () => {
-    switch (screen) {
-      case 'welcome':
-        return (
-          <div className="welcome-screen">
-            <img src={Lochat} alt="Lochat logo" />
-            <h1>Welcome to ZyRoom</h1>
-            <p>Conectando a todos</p>
-            <button onClick={handleStartChat}>Let's Start</button>
-          </div>
-        );
-      case 'rules':
-        return (
-          <div className="rules-screen">
-        <img src={rules}  className="rules-img"/>
-            <h1>Rules</h1>
-            <p>Some rules here...</p>
-            <div>
-              <button onClick={handleGoBack}>Back</button>
-              <button onClick={handleGoForward}>Next</button>
-            </div>
-          </div>
-        );
-      case 'final':
-        return (
-          <div className="final-screen">
-            <img src={Lochat} alt="Lochat logo" />
-            <h1>Final Screen</h1>
-            <p>Final content here...</p>
-            <button onClick={handleGoBack}>Back</button>
-          </div>
-        );
-      default:
-        return null;
+  const handleNext = () => {
+    if (currentScreen === 'welcome') {
+      setCurrentScreen('rules');
+    } else if (currentScreen === 'rules') {
+      setCurrentScreen('final');
     }
-  };
-
-  // Renderiza los indicadores de navegación solo en la segunda y tercera pantalla
-  const renderNavigationIndicators = () => {
-    if (screen !== 'welcome') {
-      return (
-        <div className="navigation-indicators">
-          <div className={`navigation-circle ${screen === 'rules' ? 'active' : ''}`}></div>
-          <div className={`navigation-circle ${screen === 'final' ? 'active' : ''}`}></div>
-        </div>
-      );
-    }
-    return null;
   };
 
   return (
-    <div className="chat-container">
-      {renderScreen()}
-      {renderNavigationIndicators()}
+    <div className="app">
+      {currentScreen === 'splash' && (
+        <div className="splash-screen">
+          <div className="splash-logo-container">
+            <img src={Lochat} alt="Logo" className="splash-logo" />
+            <h1 className="splash-text">YPHY</h1>
+          </div>
+        </div>
+      )}
+
+      {currentScreen === 'welcome' && (
+        <div className="welcome-screen">
+          <img src="path_to_logo" alt="Logo" className="logo" />
+          <h1>Welcome</h1>
+          <button onClick={handleNext}>Next</button>
+        </div>
+      )}
+
+      {currentScreen === 'rules' && (
+        <div className="rules-screen">
+          <h1>Rules</h1>
+          <ul>
+            <li>Rule 1</li>
+            <li>Rule 2</li>
+            <li>Rule 3</li>
+          </ul>
+          <button onClick={handleNext}>Next</button>
+        </div>
+      )}
+
+      {currentScreen === 'final' && (
+        <div className="final-screen">
+          <h1>Zyphy</h1>
+          <input type="text" placeholder="Enter your text" />
+          <button>Submit</button>
+        </div>
+      )}
     </div>
   );
 }
 
-export default Chat;
+export default chat;
