@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import './chat.css';
 import Lochat from "./well.png";
+import logo2 from "./well2.png"
 import holachat from "./chat.png";
+import { UilAsterisk } from '@iconscout/react-unicons'
 import { FaThumbsDown, FaExclamationTriangle, FaBan } from 'react-icons/fa';
 import { UilArrowRight } from '@iconscout/react-unicons'
 import rules1 from "./ruless1.png"
@@ -50,29 +52,30 @@ function chat() {
 
       {currentScreen === 'rules' && (
         <div className="rules-screen">
-        <img src={rules2} alt="Rules" className="rules-image" />
-        <h1>Algunas Reglas</h1>
+        <img src={holachat} alt="Rules" className="rules-image" />
+        <h1>Reglas</h1>
         <ul>
           <li>
-            <span className="icon"><FaThumbsDown /></span> No utilizar lenguaje obsceno
+            <span className="icon"><UilAsterisk /></span> No utilizar lenguaje obsceno
           </li>
           <li>
-            <span className="icon"><FaExclamationTriangle /></span> NO información personal.
+            <span className="icon"><UilAsterisk /></span> NO información personal.
           </li>
           <li>
-            <span className="icon"><FaBan /></span> NO spam o publicidad no deseada.
+            <span className="icon"><UilAsterisk /></span> NO spam o publicidad no deseada.
           </li>
         </ul>
         <button onClick={handleNext} className='next-button'>Next<UilArrowRight className="uil"/></button>
       </div>
       )}
 
-      {currentScreen === 'final' && (
-        <div className="final-screen">
-          <h1>Zyphy</h1>
-          <input type="text" placeholder="Escribe tu usuario" />
-          <button>Submit</button>
-        </div>
+    {currentScreen === 'final' && (
+      <div className="final-screen">
+        <h1>Join ZyphyRoom</h1>
+        <p>Username</p>
+        <input type="text" maxLength="18" />
+        <button>Join</button>
+      </div>
       )}
     </div>
   );
