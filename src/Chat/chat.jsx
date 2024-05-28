@@ -6,8 +6,9 @@ import holachat from "./chat.png";
 import { UilAsterisk } from '@iconscout/react-unicons'
 import { FaThumbsDown, FaExclamationTriangle, FaBan } from 'react-icons/fa';
 import { UilArrowRight } from '@iconscout/react-unicons'
-import rules1 from "./ruless1.png"
-import rules2 from "./ruless2.png"
+import ChatScreen from '../ChatScreen/ChatScreen';
+
+
 
 function chat() {
   const [currentScreen, setCurrentScreen] = useState('splash');
@@ -26,6 +27,10 @@ function chat() {
     } else if (currentScreen === 'rules') {
       setCurrentScreen('final');
     }
+  };
+
+  const handleJoinChat = () => {
+    setCurrentScreen('chat');
   };
 
   return (
@@ -74,9 +79,10 @@ function chat() {
         <h1>Join ZyphyRoom</h1>
         <p>Username</p>
         <input type="text" maxLength="18" />
-        <button>Join</button>
+        <button onClick={handleJoinChat}>Join</button>
       </div>
       )}
+      {currentScreen === 'chat' && <ChatScreen/>}
     </div>
   );
 }
