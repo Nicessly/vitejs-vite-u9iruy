@@ -38,10 +38,10 @@
   color: orange;
   font-size: 70px;
   font-weight: 700;
-  margin-left: 1rem;
+  margin-left: 4rem;
   position: absolute;
   opacity: 0;
-  animation: slideIn 5s ease-in-out forwards;
+  animation: slideIn 4.5s ease-in-out forwards;
 }
 
 .splash-text::after {
@@ -80,10 +80,10 @@
     transform: scale(1);
   }
   75% {
-    transform: translateX(-100px);
+    transform: translateX(-90px);
   }
   100% {
-    transform: translateX(-100px);
+    transform: translateX(-80px);
   }
 }
 
